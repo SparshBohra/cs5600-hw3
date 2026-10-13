@@ -1,0 +1,10 @@
+#!/bin/bash
+# ch8 q1
+# 2 jobs 2 queues short jobs no io
+
+for seed in 1 2 3
+do
+  echo "seed $seed"
+  python3 mlfq.py -n 2 -j 2 -m 20 -M 0 -s "$seed" -c
+  echo
+done
